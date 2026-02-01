@@ -137,7 +137,7 @@ export default function AgendamentosPage() {
           {slots.map((slot, i) => (
             <div key={i} className="flex gap-4">
               <div className="w-14 shrink-0 pt-1 text-sm text-white/90">
-                {"start" in slot ? slot.start : slot.time.split(" → ")[0]}
+                {slot.start}
               </div>
               <div className="min-w-0 flex-1">
                 {slot.type === "break" ? (
@@ -149,14 +149,14 @@ export default function AgendamentosPage() {
                   <div
                     role={slot.type === "booked" ? "button" : undefined}
                     tabIndex={slot.type === "booked" ? 0 : undefined}
-                    onClick={slot.type === "booked" ? () => { setServicosConfirmados(false); setModalSlot(slot); } : undefined}
+                    onClick={slot.type === "booked" ? () => { setServicosConfirmados(false); setModalSlot(slot as BookedSlot); } : undefined}
                     onKeyDown={
                       slot.type === "booked"
                         ? (e) => {
                             if (e.key === "Enter" || e.key === " ") {
                               e.preventDefault();
                               setServicosConfirmados(false);
-                              setModalSlot(slot);
+                              setModalSlot(slot as BookedSlot);
                             }
                           }
                         : undefined
