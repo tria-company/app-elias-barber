@@ -115,6 +115,38 @@ body {
   box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
+/* Liquid Glass: mais arredondado, brilho só no topo (sem borda embaixo e nas laterais) */
+.glass-panel-liquid {
+  position: relative;
+  background: rgba(50, 50, 50, 0.35);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: none;
+  border-radius: 24px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 -2px 0 0 rgba(255, 255, 255, 0.5);
+  transform: translateZ(0);
+  will-change: backdrop-filter;
+  isolation: isolate;
+}
+
+/* Liquid Glass com tom vermelho-marrom fraco (card Próximo atendimento) */
+.glass-panel-liquid-warm {
+  position: relative;
+  background: rgba(55, 38, 35, 0.42);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: none;
+  border-radius: 24px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 -2px 0 0 rgba(255, 255, 255, 0.5);
+  transform: translateZ(0);
+  will-change: backdrop-filter;
+  isolation: isolate;
+}
+
 /* Card / strip glass (calendário, horários, etc.) */
 .glass-card {
   position: relative;

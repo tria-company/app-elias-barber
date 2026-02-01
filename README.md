@@ -22,9 +22,9 @@ Acesse [http://localhost:3000](http://localhost:3000).
 
 1. Acesse [vercel.com](https://vercel.com) e faça login (com a mesma conta GitHub).
 2. Clique em **Add New** → **Project**.
-3. **Import** o repositório: `tria-company/app-elias`.
+3. **Import** o repositório: `tria-company/app-elias-barber`.
 4. A Vercel detecta Next.js automaticamente. Clique em **Deploy**.
-5. Aguarde o build. O app ficará disponível em [app-elias.vercel.app](https://app-elias.vercel.app).
+5. Aguarde o build. O app ficará disponível em um link como `app-elias-barber-xxx.vercel.app`.
 
 Cada push na branch `main` gera um novo deploy automaticamente.
 
@@ -45,4 +45,4 @@ Cada push na branch `main` gera um novo deploy automaticamente.
 
 ## Repositório
 
-[github.com/tria-company/app-elias](https://github.com/tria-company/app-elias)
+[github.com/tria-company/app-elias-barber](https://github.com/tria-company/app-elias-barber)

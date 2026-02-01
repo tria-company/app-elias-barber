@@ -155,8 +155,12 @@ export default function PerfilPage() {
 
       {/* Navegação inferior – Perfil ativo */}
       <nav
-        className="glass-nav-floating fixed left-4 right-4 bottom-4 z-50 px-4 py-3 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:max-w-md"
-        style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
+        className="fixed left-4 right-4 bottom-4 z-50 rounded-2xl px-4 py-3 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:max-w-md"
+        style={{
+          paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))",
+          backgroundColor: "rgba(28, 26, 25, 0.95)",
+          boxShadow: "0 -1px 0 0 rgba(255, 255, 255, 0.08), 0 8px 32px rgba(0, 0, 0, 0.5)",
+        }}
         aria-label="Navegação principal"
       >
         <div className="mx-auto flex max-w-md items-center justify-around">
@@ -166,13 +170,6 @@ export default function PerfilPage() {
             </svg>
             <span className="text-xs font-medium">Início</span>
           </Link>
-          <Link href="/explorar" className="flex flex-col items-center gap-1 text-white/60 hover:text-white/80">
-            <svg width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
-              <circle cx="12" cy="12" r="10" />
-              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-            </svg>
-            <span className="text-xs font-medium">Explorar</span>
-          </Link>
           <Link href="/agendamentos" className="flex flex-col items-center gap-1 text-white/60 hover:text-white/80">
             <svg width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -181,6 +178,15 @@ export default function PerfilPage() {
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
             <span className="text-xs font-medium">Agenda</span>
+          </Link>
+          <Link href="/fila-espera" className="flex flex-col items-center gap-1 text-white/60 hover:text-white/80">
+            <svg width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M5 2h14" />
+              <path d="M5 22h14" />
+              <path d="M5 2v4l7 6 7-6V2" />
+              <path d="M5 22v-4l7-6 7 6v4" />
+            </svg>
+            <span className="text-xs font-medium">Fila de espera</span>
           </Link>
           <Link href="/perfil" className="flex flex-col items-center gap-1 text-[var(--brand-yellow)]" aria-current="page">
             <svg width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>

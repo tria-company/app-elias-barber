@@ -6,16 +6,16 @@ import { StatusBar } from "@/components/StatusBar";
 
 const SLIDES = [
   {
-    title: "Seu novo padrão de barbearia começa aqui.",
+    title: "Controle total da sua rotina como barbeiro.",
     description:
-      "Experiência premium, profissionais de elite e atenção a cada detalhe.",
-    background: "/onboarding1.jpg",
+      "Veja seus atendimentos, organize tarefas e acompanhe seus resultados sem perder tempo.",
+    background: "/onboarding1.1.png",
   },
   {
-    title: "Onde estilo e precisão se encontram.",
+    title: "Agenda, tarefas e resultados em um só lugar.",
     description:
-      "Agende com barbeiros especializados, sem espera e sem complicações.",
-    background: "/onboarding2.png",
+      "Trabalhe com mais controle e menos improviso.",
+    background: "/onboarding2.2.png",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function OnboardingPage() {
               <div
                 key={i}
                 className={`h-1 rounded-full transition-all ${
-                  i === step ? "w-6 bg-(--brand-yellow)" : "w-2 bg-white"
+                  i === step ? "w-6 bg-[var(--brand-yellow)]" : "w-2 bg-white"
                 }`}
               />
             ))}
@@ -78,7 +78,7 @@ export default function OnboardingPage() {
             <button
               type="button"
               onClick={handleNext}
-              className="glass-btn-primary flex-1"
+              className="glass-btn-primary flex-1 text-white"
             >
               {isLast ? "Começar" : "Próximo"}
             </button>
